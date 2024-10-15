@@ -190,7 +190,7 @@ terraform apply --auto-approve
 ## state 
 
 * Hvis du slår på visning av skjulte filer i Cloud9 vil du nå se en ````.terraform```` katalog. Denne inneholder en terraform "provider" for AWS (Det som gjør at Terraform kan lage-, endre og slette infrastruktur i AWS) - Disse filene ble lastet ned på ```terraform init```
-* Når apply er ferdig, vil du se en terraform.tfstate fil i katalogen du kjørte terrafomr fra. Se på filen. Den inneholder informasjon om ECR repoet du opprettet.
+* Når apply er ferdig, vil du se en terraform.tfstate fil i katalogen du kjørte terraform fra. Se på filen. Den inneholder informasjon om ECR repoet du opprettet.
 * Åpne state filen, se litt på innholdet
 * Slette denne filen, og kjøre terraform apply en gang til. Terraform prøver å opprette ECR repo på nytt, hvorfor?
 * Slik informasjon ligger i "state" filen til terraform som du nettopp slettet!
