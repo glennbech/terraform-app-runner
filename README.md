@@ -208,7 +208,7 @@ terraform {
   }
   backend "s3" {
     bucket = "pgr301-2024-terraform-state"
-    key    = "<student-navn>/apprunner-lab.state"
+    key    = "<student-navn>/apprunner-demo.state"
     region = "eu-west-1"
   }
 }
