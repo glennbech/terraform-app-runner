@@ -217,6 +217,7 @@ terraform {
 * For å starte med blank ark må du fjerne evt
 * * terraform.state,
   * hele .terraform katalogen
+  * terraform.tfstate.backup 
   * eventuelt alle filer som har  ````.terraform```` i navnet.
 
 Deretter utfører du kommandoene
