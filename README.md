@@ -192,8 +192,7 @@ terraform apply --auto-approve
 * Hvis du slår på visning av skjulte filer i Cloud9 vil du nå se en ````.terraform```` katalog. Denne inneholder en terraform "provider" for AWS (Det som gjør at Terraform kan lage-, endre og slette infrastruktur i AWS) - Disse filene ble lastet ned på ```terraform init```
 * Når apply er ferdig, vil du se en terraform.tfstate fil i katalogen du kjørte terraform fra. Se på filen. Den inneholder informasjon om ECR repoet du opprettet.
 * Åpne state filen, se litt på innholdet
-* Slette denne filen, og kjøre terraform apply en gang til. Terraform prøver å opprette ECR repo på nytt, hvorfor?
-* Slik informasjon ligger i "state" filen til terraform som du nettopp slettet!
+* Slette terraform.tfstate filen, og kjøre terraform apply en gang til. Terraform prøver å opprette ECR repo på nytt, hvorfor?
 * Gå til Amazon ECR-tjenesten i AWS, og slett det ECR repoet du lagde.
 
 Endre provider.tf ved å legge på en _backend_ blokk, slik at den ser omtrent slik ut, du må modifisere med egent student navn,
@@ -215,7 +214,10 @@ terraform {
 ```
 * Dette er mer robust ! Her forteller vi Terraform at state-informasjon skal lagres i S3, i en Bucket som ligger i Stockholm regionen, med et filnavn du selv bestemmer
   ved å endre "key"
-* For å starte med blank ark må du fjerne evt terraform.state, hele .terraform katalogen, og alle filer som starter med ````.terraform````
+* For å starte med blank ark må du fjerne evt
+* * terraform.state,
+  * hele .terraform katalogen
+  * eventuelt alle filer som har  ````.terraform```` i navnet.
 
 Deretter utfører du kommandoene
 
